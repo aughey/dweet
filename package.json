@@ -1,0 +1,14 @@
+{
+  "name": "dweet",
+  "version": "1.0.0",
+  "description": "A node.js simplistic clone of dweet.io.",
+  "author": "John H. Aughey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mongodb": ">0.0.1",
+    "socket.io": ">0.0.1",
+    "q": ">0.0.1"
+  }
+}
