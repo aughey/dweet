@@ -30,6 +30,8 @@ POST /dweet/temp/:user/:thing
 ```
 
 The standard `GET /dweet/for/:user/:thing` will retrieve this dweet.
-Either a post to /dweet/temp or /dweet/for will set the :user/:thing
+A post to either /dweet/temp or /dweet/for will set the :user/:thing
 dweet, the only difference is the temp version will not write it to
 the database.
+
+
