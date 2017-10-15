@@ -95,12 +95,9 @@ Q.nfcall(MongoClient.connect, "mongodb://localhost/dweet").then((db) => {
 })
 
 io.on('connection', function(socket) {
-  console.log("connection");
   var subscriptions = {}
   socket.on('disconnect', function() {
-    console.log("Unsubscribing all");
     for (var key in subscriptions) {
-      console.log("  " + key);
       key_emitter.removeListener(key, subscriptions[key]);
     }
     subscriptions = null;
@@ -111,7 +108,6 @@ io.on('connection', function(socket) {
     if (subscriptions[key]) {
       return;
     }
-    console.log("sub " + key);
     var url = 'http://localhost:3000/dweet/for/' + key;
     var emit = (data) => {
       if (short) {
